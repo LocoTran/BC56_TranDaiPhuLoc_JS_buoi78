@@ -11,108 +11,280 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
     <div class="container">
         <form class="form-group">
-            <label for="">Nhập số n:</label>
+            <label for="">Nhập số nguyên n:</label>
             <input type="text" class="form-control" id="number">
             <button type="submit" class="d-block mt-2 btn btn-success" id="addNum">Thêm số vào mảng</button>
         </form>
         <div class="arrayNumbers my-2"></div>
 
-        <div class="bai_1">
-            <button class="btn btn-warning" id="tinhTongCacSoDuong">Tính tổng các số dương trong mảng</button>
-            <div id="result_1" class="mt-2"></div>
-        </div>
+        <div class="accordion my-2" id="bai_tap_1">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block d-flex justify-content-between align-items-center" type="button"
+                            data-toggle="collapse" data-target="#collapse_1" aria-expanded="true"
+                            aria-controls="collapse_1">
+                            #1 Tính tổng các số dương có trong mảng
+                            <i class="float-right fa-solid fa-chevron-down fa-lg"></i>
+                        </button>
+                    </h2>
+                </div>
 
-        <div class="bai_2">
-            <button class="btn btn-warning" id="demCacSoDuong">Đếm các số dương trong mảng</button>
-            <div id="result_2" class="mt-2"></div>
-        </div>
-
-        <div class="bai_3">
-            <button class="btn btn-warning" id="timSoNhoNhat">Tìm số nhỏ nhất trong mảng</button>
-            <div id="result_3" class="mt-2"></div>
-        </div>
-
-        <div class="bai_4">
-            <button class="btn btn-warning" id="timSoDuongNhoNhat">Tìm số dương nhỏ nhất trong mảng</button>
-            <div id="result_4" class="mt-2"></div>
-        </div>
-
-        <div class="bai_5">
-            <button class="btn btn-warning" id="timSoChanCuoiCung">Tìm số chẵn cuỗi cùng trong mảng</button>
-            <div id="result_5" class="mt-2"></div>
-        </div>
-
-        <div class="bai_6">
-            <div class="form-group">
-                <label for="">Vị trí muốn đổi 1</label>
-                <input type="text" class="form-control" id="index-01">
-            </div>
-            <div class="form-group">
-                <label for="">Vị trí muốn đổi 2</label>
-                <input type="text" class="form-control" id="index-02">
-            </div>
-            <button class="btn btn-warning" id="doiCho2So">Đổi 2 giá trị theo vị trí này</button>
-            <div id="result_6" class="mt-2"></div>
-        </div>
-
-        <div class="bai_7">
-            <button class="btn btn-warning" id="sapXepTangDan">Sắp xếp mảng theo thứ tự tăng dần</button>
-            <div id="result_7" class="mt-2"></div>
-        </div>
-
-        <div class="bai_8">
-            <button class="btn btn-warning" id="timSoNguyenToDauTien">Tìm số nguyên tố đầu tiên</button>
-            <div id="result_8" class="mt-2"></div>
-        </div>
-
-        <div class="bai_9">
-            <form class="form-group" id="arrNew">
-                <label for="">Nhập số n:</label>
-                <input type="text" class="form-control" id="numberNew">
-                <button type="submit" class="d-block mt-2 btn btn-success" id="addNumNew">Thêm số vào mảng</button>
-            </form>
-            <div class="arrayNumbersNew my-2"></div>
-
-            <button class="btn btn-warning" id="demSoNguyen">Đếm số nguyên</button>
-            <div id="result_9" class="mt-2"></div>
-        </div>
-
-        <div class="bai_10">
-            <button class="btn btn-warning" id="soSanhAmDuong">So sánh số lượng số âm và số dương</button>
-            <div id="result_10" class="mt-2"></div>
-        </div>
-    </div>
-
-    <!-- <div class="accordion" id="accordionExample">
-        <div class="card">
-            <div class="card-header" id="headingOne">
-
-                <h2 class="mb-0">
-                    <button class="btn btn-block d-flex justify-content-between align-items-center" type="button"
-                        data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                        aria-controls="collapseOne">
-                        Collapsible Group Item #1
-                        <i class="float-right fa-solid fa-chevron-down fa-lg"></i>
-                    </button>
-                </h2>
-            </div>
-
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                    Some placeholder content for the first accordion panel. This panel is shown by default, thanks to
-                    the <code>.show</code> class.
+                <div id="collapse_1" class="collapse" aria-labelledby="headingOne" data-parent="#bai_tap_1">
+                    <div class="card-body">
+                        <button class="btn btn-warning" id="tinhTongCacSoDuong">Tính tổng</button>
+                        <div id="result_1" class="mt-2">
+                            <i class="fa-solid fa-right-from-bracket  mr-2"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div> -->
+
+        <div class="accordion my-2" id="bai_tap_2">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block d-flex justify-content-between align-items-center" type="button"
+                            data-toggle="collapse" data-target="#collapse_2" aria-expanded="true"
+                            aria-controls="collapse_2">
+                            #2 Đếm các số dương trong mảng
+                            <i class="float-right fa-solid fa-chevron-down fa-lg"></i>
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapse_2" class="collapse" aria-labelledby="headingOne" data-parent="#bai_tap_2">
+                    <div class="card-body">
+                        <button class="btn btn-warning" id="demCacSoDuong">Đếm</button>
+                        <div id="result_2" class="mt-2">
+                            <i class="fa-solid fa-right-from-bracket mr-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion my-2" id="bai_tap_3">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block d-flex justify-content-between align-items-center" type="button"
+                            data-toggle="collapse" data-target="#collapse_3" aria-expanded="true"
+                            aria-controls="collapse_3">
+                            #3 Tìm số nhỏ nhất trong mảng
+                            <i class="float-right fa-solid fa-chevron-down fa-lg"></i>
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapse_3" class="collapse" aria-labelledby="headingOne" data-parent="#bai_tap_3">
+                    <div class="card-body">
+                        <button class="btn btn-warning" id="timSoNhoNhat">Tìm số</button>
+                        <div id="result_3" class="mt-2">
+                            <i class="fa-solid fa-right-from-bracket mr-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion my-2" id="bai_tap_4">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block d-flex justify-content-between align-items-center" type="button"
+                            data-toggle="collapse" data-target="#collapse_4" aria-expanded="true"
+                            aria-controls="collapse_4">
+                            #4 Tìm số dương nhỏ nhất trong mảng
+                            <i class="float-right fa-solid fa-chevron-down fa-lg"></i>
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapse_4" class="collapse" aria-labelledby="headingOne" data-parent="#bai_tap_4">
+                    <div class="card-body">
+                        <button class="btn btn-warning" id="timSoDuongNhoNhat">Tìm số</button>
+                        <div id="result_4" class="mt-2">
+                            <i class="fa-solid fa-right-from-bracket mr-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion my-2" id="bai_tap_5">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block d-flex justify-content-between align-items-center" type="button"
+                            data-toggle="collapse" data-target="#collapse_5" aria-expanded="true"
+                            aria-controls="collapse_5">
+                            #5 Tìm số chẵn cuỗi cùng trong mảng
+                            <i class="float-right fa-solid fa-chevron-down fa-lg"></i>
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapse_5" class="collapse" aria-labelledby="headingOne" data-parent="#bai_tap_5">
+                    <div class="card-body">
+                        <button class="btn btn-warning" id="timSoChanCuoiCung">Tìm số</button>
+                        <div id="result_5" class="mt-2">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion my-2" id="bai_tap_6">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block d-flex justify-content-between align-items-center" type="button"
+                            data-toggle="collapse" data-target="#collapse_6" aria-expanded="true"
+                            aria-controls="collapse_6">
+                            #6 Đổi 2 giá trị theo vị trí
+                            <i class="float-right fa-solid fa-chevron-down fa-lg"></i>
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapse_6" class="collapse" aria-labelledby="headingOne" data-parent="#bai_tap_6">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="">Vị trí muốn đổi 1</label>
+                            <input type="text" class="form-control" id="index-01">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Vị trí muốn đổi 2</label>
+                            <input type="text" class="form-control" id="index-02">
+                        </div>
+                        <button class="btn btn-warning" id="doiCho2So">Đổi 2 giá trị theo vị trí này</button>
+                        <div id="result_6" class="mt-2">
+                            <i class="fa-solid fa-right-from-bracket mr-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion my-2" id="bai_tap_7">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block d-flex justify-content-between align-items-center" type="button"
+                            data-toggle="collapse" data-target="#collapse_7" aria-expanded="true"
+                            aria-controls="collapse_7">
+                            #7 Sắp xếp mảng theo thứ tự tăng dần
+                            <i class="float-right fa-solid fa-chevron-down fa-lg"></i>
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapse_7" class="collapse" aria-labelledby="headingOne" data-parent="#bai_tap_7">
+                    <div class="card-body">
+                        <button class="btn btn-warning" id="sapXepTangDan">Sắp xếp</button>
+                        <div id="result_7" class="mt-2">
+                            <i class="fa-solid fa-right-from-bracket mr-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion my-2" id="bai_tap_8">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block d-flex justify-content-between align-items-center" type="button"
+                            data-toggle="collapse" data-target="#collapse_8" aria-expanded="true"
+                            aria-controls="collapse_8">
+                            #8 Tìm số nguyên tố đầu tiên
+                            <i class="float-right fa-solid fa-chevron-down fa-lg"></i>
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapse_8" class="collapse" aria-labelledby="headingOne" data-parent="#bai_tap_8">
+                    <div class="card-body">
+                        <button class="btn btn-warning" id="timSoNguyenToDauTien">Tìm số</button>
+                        <div id="result_8" class="mt-2">
+                            <i class="fa-solid fa-right-from-bracket mr-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form class="form-group" id="arrNew">
+            <label for="">Nhập số thực n mới:</label>
+            <input type="text" class="form-control" id="numberNew">
+            <button type="submit" class="d-block mt-2 btn btn-success" id="addNumNew">Thêm số vào mảng</button>
+        </form>
+        <div class="arrayNumbersNew my-2"></div>
+
+        <div class="accordion my-2" id="bai_tap_9">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block d-flex justify-content-between align-items-center" type="button"
+                            data-toggle="collapse" data-target="#collapse_9" aria-expanded="true"
+                            aria-controls="collapse_9">
+                            #9 Đếm số nguyên có trong mảng
+                            <i class="float-right fa-solid fa-chevron-down fa-lg"></i>
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapse_9" class="collapse" aria-labelledby="headingOne" data-parent="#bai_tap_9">
+                    <div class="card-body">
+                        <button class="btn btn-warning" id="demSoNguyen">Đếm số</button>
+                        <div id="result_9" class="mt-2">
+                            <i class="fa-solid fa-right-from-bracket mr-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion my-2" id="bai_tap_10">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block d-flex justify-content-between align-items-center" type="button"
+                            data-toggle="collapse" data-target="#collapse_10" aria-expanded="true"
+                            aria-controls="collapse_10">
+                            #10 So sánh số lượng số âm và số dương
+                            <i class="float-right fa-solid fa-chevron-down fa-lg"></i>
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapse_10" class="collapse" aria-labelledby="headingOne" data-parent="#bai_tap_10">
+                    <div class="card-body">
+                        <button class="btn btn-warning" id="soSanhAmDuong">So sánh</button>
+                        <div id="result_10" class="mt-2">
+                            <i class="fa-solid fa-right-from-bracket mr-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

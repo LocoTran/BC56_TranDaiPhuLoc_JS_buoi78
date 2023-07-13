@@ -24,7 +24,7 @@ document.querySelector("#tinhTongCacSoDuong").onclick = function () {
   }
 
   document.querySelector("#result_1").innerHTML = `
-  <p>Tổng các số dương trong dãy số là : ${tongDuong}</p>`;
+  <span><i class="fa-solid fa-right-from-bracket mr-2"></i> Tổng các số dương trong dãy số là : ${tongDuong}</span>`;
 };
 
 //Bài 2
@@ -39,7 +39,7 @@ document.querySelector("#demCacSoDuong").onclick = function () {
 
   document.querySelector(
     "#result_2"
-  ).innerHTML = `<p>Có ${demSoDuong} số dương trong dãy số</p>`;
+  ).innerHTML = `<span><i class="fa-solid fa-right-from-bracket mr-2"></i> Có ${demSoDuong} số dương trong dãy số</span>`;
 };
 
 //Bài 3
@@ -53,7 +53,7 @@ document.querySelector("#timSoNhoNhat").onclick = function () {
   }
 
   document.querySelector("#result_3").innerHTML = `
-    <p>Số nhỏ nhất trong mảng là: ${soNhoNhat}</p>`;
+    <span><i class="fa-solid fa-right-from-bracket mr-2"></i> Số nhỏ nhất trong mảng là: ${soNhoNhat}</span>`;
 };
 
 //Bài 4
@@ -69,11 +69,11 @@ document.querySelector("#timSoDuongNhoNhat").onclick = function () {
   if (soDuongNhoNhat >= 0) {
     document.querySelector(
       "#result_4"
-    ).innerHTML = `<p>Số dương nhỏ nhất trong mảng là: ${soDuongNhoNhat}</p>`;
+    ).innerHTML = `<span><i class="fa-solid fa-right-from-bracket"></i> Số dương nhỏ nhất trong mảng là: ${soDuongNhoNhat}</span>`;
   } else {
     document.querySelector(
       "#result_4"
-    ).innerHTML = `<p>Trong dãy ko có số dương</p>`;
+    ).innerHTML = `<span><i class="fa-solid fa-right-from-bracket"></i> Trong dãy ko có số dương</span>`;
   }
 };
 
@@ -89,10 +89,10 @@ document.querySelector("#timSoChanCuoiCung").onclick = function () {
 
   if (soChanCuoiCung % 2 == 0) {
     document.querySelector("#result_5").innerHTML = `
-        <p>Số chẵn cuỗi cùng trong mảng là: ${soChanCuoiCung}</p>`;
+        <span><i class="fa-solid fa-right-from-bracket mr-2"></i> Số chẵn cuỗi cùng trong mảng là: ${soChanCuoiCung}</span>`;
   } else {
     document.querySelector("#result_5").innerHTML = `
-      <p>${soChanCuoiCung} do trong mảng ko có số chẵn</p>`;
+      <span><i class="fa-solid fa-right-from-bracket mr-2"></i> ${soChanCuoiCung} do trong mảng ko có số chẵn</span>`;
   }
 };
 
@@ -107,14 +107,14 @@ document.querySelector("#doiCho2So").onclick = function () {
   arrNum[viTri2] = soThu1;
 
   document.querySelector("#result_6").innerHTML = `
-  <p>Mảng số sau khi đổi là: [${arrNum}] </p>`;
+  <span><i class="fa-solid fa-right-from-bracket mr-2"></i> Mảng số sau khi đổi là: [${arrNum}] </span>`;
 };
 
 //Bài 7
 document.querySelector("#sapXepTangDan").onclick = function () {
   arrNum.sort();
   document.querySelector("#result_7").innerHTML = `
-  <p>Dãy số theo thứ tự tăng dần: [${arrNum}]</p>`;
+  <span><i class="fa-solid fa-right-from-bracket mr-2"></i> Dãy số theo thứ tự tăng dần: [${arrNum}]</span>`;
 };
 
 //Bài 8
@@ -141,10 +141,10 @@ document.querySelector("#timSoNguyenToDauTien").onclick = function () {
     var sNT = xacDinhSoNguyenTo(arrNum[i]);
     if (sNT) {
       return (document.querySelector("#result_8").innerHTML = `
-      <p>Số nguyên tố đầu tiên trong mảng là: ${arrNum[i]}</p>`);
+      <span><i class="fa-solid fa-right-from-bracket mr-2"></i> Số nguyên tố đầu tiên trong mảng là: ${arrNum[i]}</span>`);
     } else if (i == arrNum.length - 1) {
       document.querySelector("#result_8").innerHTML = `
-      <p>-1 do trong mảng ko có số nguyên tố</p>`;
+      <span><i class="fa-solid fa-right-from-bracket mr-2"></i> -1 do trong mảng ko có số nguyên tố</span>`;
     }
   }
 };
@@ -164,7 +164,7 @@ document.querySelector("#addNumNew").onclick = function (event) {
   arrNumAll = arrNum.concat(arrNumNew);
   document.querySelector(
     ".arrayNumbersNew"
-  ).innerHTML = `Hiện trong mảng mới sau khi gộp có các số: [${arrNumAll}]`;
+  ).innerHTML = `Trong mảng mới sau khi gộp có các số: [${arrNumAll}]`;
 };
 
 document.querySelector("#demSoNguyen").onclick = function () {
@@ -177,7 +177,7 @@ document.querySelector("#demSoNguyen").onclick = function () {
   }
 
   document.querySelector("#result_9").innerHTML = `
-  <p>Trong dãy số sau khi gộp có ${demSoNguyen} số nguyên</p>`;
+  <span><i class="fa-solid fa-right-from-bracket mr-2"></i> Trong dãy số sau khi gộp có ${demSoNguyen} số nguyên</span>`;
 };
 
 //Bài 10
@@ -205,12 +205,12 @@ document.querySelector("#soSanhAmDuong").onclick = function () {
 
   if (demSoAm === demSoDuong) {
     document.querySelector("#result_10").innerHTML = `
-    <p>Trong dãy số mới số lượng số âm và số lượng số dương bằng nhau đều là ${demSoAm}</p>`;
+    <span><i class="fa-solid fa-right-from-bracket mr-2"></i> Trong dãy số mới số lượng số âm và số lượng số dương bằng nhau đều là ${demSoAm}</span>`;
   } else if (demSoAm < demSoDuong) {
     document.querySelector("#result_10").innerHTML = `
-    <p>Trong dãy số mới số lượng số âm là ${demSoAm} nhỏ hơn số lượng số dương là ${demSoDuong}</p>`;
+    <span><i class="fa-solid fa-right-from-bracket mr-2"></i> Trong dãy số mới số lượng số âm là ${demSoAm} nhỏ hơn số lượng số dương là ${demSoDuong}</span>`;
   } else {
     document.querySelector("#result_10").innerHTML = `
-    <p>Trong dãy số mới số lượng số âm là ${demSoAm} lớn hơn số lượng số dương là ${demSoDuong}</p>`;
+    <span><i class="fa-solid fa-right-from-bracket mr-2"></i> Trong dãy số mới số lượng số âm là ${demSoAm} lớn hơn số lượng số dương là ${demSoDuong}</span>`;
   }
 };
